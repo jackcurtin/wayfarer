@@ -1,4 +1,13 @@
 header{
-  background-color: blue;
+  display: flex;
+  background-color: cornflowerblue;
   color: white;
+  height: 7vh;
+  justify-items: center;
+}
+h1{
+  margin-left: 1vw;
+}
+#content{
+  margin: 0px 2% 2%;
 }
