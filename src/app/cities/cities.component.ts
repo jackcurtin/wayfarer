@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CitiesModule } from './cities.module';
 
 @Component({
   selector: 'app-cities',
@@ -6,11 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cities.component.css']
 })
 export class CitiesComponent implements OnInit {
-  id: number;
-  name: string;
-  country: string;
-  posts = new Array(4);
-
+  allCities = ['San Francisco', 'London'];
   constructor() {
   }
 

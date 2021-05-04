@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { CitiesComponent } from './cities/cities.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { TopicsComponent } from './homepage/topics/topics.component';
-import { SanFranComponent } from './cities/san-fran/san-fran.component';
+import { CityListingComponent } from './cities/city-listing/city-listing.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +14,7 @@ import { SanFranComponent } from './cities/san-fran/san-fran.component';
     CitiesComponent,
     HomepageComponent,
     TopicsComponent,
-    SanFranComponent
+    CityListingComponent
   ],
   imports: [
     BrowserModule,

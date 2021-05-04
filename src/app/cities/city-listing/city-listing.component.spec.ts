@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SanFranComponent } from './san-fran.component';
+import { CityListingComponent } from './city-listing.component';
 
-describe('SanFranComponent', () => {
-  let component: SanFranComponent;
-  let fixture: ComponentFixture<SanFranComponent>;
+describe('CityListingComponent', () => {
+  let component: CityListingComponent;
+  let fixture: ComponentFixture<CityListingComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SanFranComponent ]
+      declarations: [ CityListingComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SanFranComponent);
+    fixture = TestBed.createComponent(CityListingComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
