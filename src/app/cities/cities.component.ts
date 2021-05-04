@@ -7,14 +7,17 @@ import { CitiesService} from '../services/cities/cities.service';
   styleUrls: ['./cities.component.css']
 })
 export class CitiesComponent implements OnInit {
+  id: number;
   name: string;
   country: string;
-  posts: [];
-
+  posts = new Array(4);
 
   constructor(private citiesService: CitiesService) { }
 
   ngOnInit(): void {
+    this.id = 1;
+    this.name = 'San Francisco';
+    this.country = 'United States';
   }
 
 }
