@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { CitiesComponent } from './cities/cities.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { TopicsComponent } from './homepage/topics/topics.component';
+import { SanFranComponent } from './cities/san-fran/san-fran.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CitiesComponent,
     HomepageComponent,
-    TopicsComponent
+    TopicsComponent,
+    SanFranComponent
   ],
   imports: [
     BrowserModule,

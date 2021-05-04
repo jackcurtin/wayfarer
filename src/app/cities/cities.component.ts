@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { CitiesService} from '../services/cities/cities.service';
 
 @Component({
   selector: 'app-cities',
@@ -12,12 +11,10 @@ export class CitiesComponent implements OnInit {
   country: string;
   posts = new Array(4);
 
-  constructor(private citiesService: CitiesService) { }
+  constructor() {
+  }
 
   ngOnInit(): void {
-    this.id = 1;
-    this.name = 'San Francisco';
-    this.country = 'United States';
   }
 
 }

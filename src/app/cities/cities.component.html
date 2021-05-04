@@ -1,17 +1,6 @@
 <section id="cities_list">
   <ul>
-    <li>{{this.name}}</li>
+    <li routerLink="1">San Francisco</li>
   </ul>
 </section>
-<section id="current_city">
-  <div id="city_header">
-    <h3>{{this.name}}</h3>
-    <h5>{{this.country}}</h5>
-    <img src="assets/sanfran.jpeg">
-  </div>
-  <div>
-    <ul>
-      <li *ngFor="let post of posts">Post</li>
-    </ul>
-  </div>
-</section>
+<router-outlet></router-outlet>
