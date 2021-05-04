@@ -2,6 +2,7 @@ import {Component, Input, OnInit} from '@angular/core';
 import {CitiesComponent} from '../cities.component';
 import { ActivatedRoute} from '@angular/router';
 import {Subscription} from 'rxjs';
+import {CITIES} from '../cities';
 
 @Component({
   selector: 'app-city-listing',
@@ -16,6 +17,5 @@ export class CityListingComponent implements OnInit {
   }
 
   ngOnInit(): void {
-
   }
 }

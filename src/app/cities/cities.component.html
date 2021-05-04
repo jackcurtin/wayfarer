@@ -1,10 +1,7 @@
 <section id="cities_list">
   <ul>
-    <li routerLink="1">San Francisco</li>
-    <li routerLink="2">London</li>
+    <li *ngFor="let city of allCities" routerLink="{{city.id}}">{{city.name}}</li>
   </ul>
 </section>
-<app-city-listing *ngFor="let city of allCities; index as i"
-                  [name]="allCities[i]"
-                  [id]="i+1"
-></app-city-listing>
+<h2>City {{city}}</h2>
+<app-city-listing [id]="city"></app-city-listing>
