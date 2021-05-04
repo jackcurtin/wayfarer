@@ -3,11 +3,15 @@ header{
   background-color: cornflowerblue;
   color: white;
   height: 7vh;
-  justify-items: center;
+  align-items: center;
 }
 h1{
   margin-left: 1vw;
 }
 #content{
   margin: 0px 2% 2%;
+}
+#logo{
+  height: 75%;
+  margin-left: 10px;
 }
