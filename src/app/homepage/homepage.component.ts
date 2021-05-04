@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomepageComponent implements OnInit {
 
+  topics = new Array(3);
+
   constructor() { }
 
   ngOnInit(): void {
