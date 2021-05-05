@@ -8,9 +8,13 @@ export class SearchService {
 
   constructor() { }
 
-  findPost(searchCriteria): any{
-    return POSTS.filter(posts => {
-      posts.title.includes(searchCriteria);
+  findPosts(searchCriteria): any{
+    let filteredPosts = [];
+    POSTS.forEach(post => {
+      if (post.title.toLowerCase().includes(searchCriteria.toLowerCase())){
+        filteredPosts.push(post);
+      }
     });
+    return filteredPosts;
   }
 }
