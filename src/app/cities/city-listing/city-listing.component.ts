@@ -1,6 +1,9 @@
 import {Component, Input, OnInit} from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import {CITIES} from '../cities';
+import {Subject} from 'rxjs';
+import {SearchService} from '../search/search.service';
+import {distinctUntilChanged} from 'rxjs/operators';
 
 
 @Component({
@@ -11,13 +14,11 @@ import {CITIES} from '../cities';
 export class CityListingComponent implements OnInit {
   allCities = CITIES;
   city: any;
-  filteredPosts = [];
+  searchInput = '';
+  filteredPosts: any = [];
+  searchSubject = new Subject();
 
-  addFilteredPost(newPost: any){
-    this.filteredPosts.push(newPost);
-  }
-
-  constructor(private route: ActivatedRoute) {
+  constructor(private route: ActivatedRoute, private searchService: SearchService) {
   }
 
   ngOnInit(): void {
@@ -26,5 +27,14 @@ export class CityListingComponent implements OnInit {
         return city.id === parseInt(params.get('cityId'), 10);
       });
     });
+    this.searchSubject.pipe(distinctUntilChanged()).subscribe(searchCriteria => {
+      console.log(searchCriteria);
+      this.filteredPosts = this.searchService.findPosts(searchCriteria);
+      console.log(this.filteredPosts);
+    });
+  }
+
+  pushSearch(searchInput): void{
+    this.searchSubject.next(searchInput);
   }
 }

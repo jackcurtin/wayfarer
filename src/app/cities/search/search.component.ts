@@ -1,8 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, Output} from '@angular/core';
 import {Subject} from 'rxjs';
 import {distinctUntilChanged} from 'rxjs/operators';
 import {SearchService} from './search.service';
-import { Output, EventEmitter} from '@angular/core';
 
 @Component({
   selector: 'app-search',
@@ -11,20 +10,16 @@ import { Output, EventEmitter} from '@angular/core';
 })
 export class SearchComponent implements OnInit {
   searchInput: string;
-  @Output() posts = new EventEmitter<any>();
+  filteredPosts: any;
   searchSubject = new Subject();
-
-  addNewPost(value: string){
-    this.posts.emit(value);
-  }
 
   constructor(private searchService: SearchService) { }
 
   ngOnInit(): void {
     this.searchSubject.pipe(distinctUntilChanged()).subscribe(searchCriteria => {
       console.log(searchCriteria);
-      this.posts = this.searchService.findPosts(searchCriteria);
-      console.log(this.posts);
+      this.filteredPosts = this.searchService.findPosts(searchCriteria);
+      console.log(this.filteredPosts);
     });
   }
 

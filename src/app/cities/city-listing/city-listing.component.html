@@ -5,9 +5,18 @@
 </div>
 <div>
   <h2>Posts</h2>
-  <app-search (posts)="addFilteredPost($event)"></app-search>
-  <ul *ngIf="filteredPosts.length===0">
+  <input [(ngModel)]="searchInput" type="text" placeholder="Search for posts" (keyup)="pushSearch(searchInput)">
+  <ul *ngIf="filteredPosts.length===0 && searchInput.length!==0">
+    <li class="posts">no matches</li>
+  </ul>
+  <ul *ngIf="filteredPosts.length===0 && searchInput.length===0">
     <li class="posts" *ngFor="let post of city.posts; index as i;">
+      <a class="post_title" routerLink="{{post.id}}">{{post.title}} - {{post.date}}</a>
+      <p>{{post.body}}</p>
+    </li>
+  </ul>
+  <ul *ngIf="filteredPosts.length>0">
+    <li class="posts" *ngFor="let post of filteredPosts; index as i;">
       <a class="post_title" routerLink="{{post.id}}">{{post.title}} - {{post.date}}</a>
       <p>{{post.body}}</p>
     </li>
