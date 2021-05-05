@@ -9,7 +9,9 @@ h1{
   margin-left: 1vw;
 }
 #content{
-  margin: 0px 2% 2%;
+  margin: 0px 2% 2% 2%;
+  display: inline-flex;
+  justify-content: space-evenly;
 }
 #logo{
   height: 75%;

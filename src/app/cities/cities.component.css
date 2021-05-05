@@ -1,16 +1,24 @@
 #cities_landing{
   display: inline-flex;
-  justify-items: center;
+  justify-content: space-evenly;
+  margin: auto;
 }
 #cities_list{
-  width: 34vw;
+  width: 25vw;
   font-size: 30px;
+  border: black solid;
+  justify-content: center;
 }
 
 .city_links{
   text-align: center;
   background-color: lightgoldenrodyellow;
   border-radius: 15px;
-  margin: 10px 100px 0 0
+  margin-top: 20px;
+  border: black solid 1px;
+  width: 60%;
+}
 
+ul{
+  padding-left: 0px;
 }

@@ -9,3 +9,19 @@
   text-transform: uppercase;
   font-weight: bold;
 }
+
+#city_header{
+  display: inline-flex;
+}
+
+#city_img{
+  width: 650px;
+  text-align: right;
+}
+
+#city_listing{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-items: center;
+}

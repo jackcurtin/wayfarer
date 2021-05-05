@@ -1,24 +1,28 @@
-<div id="city_header">
-  <h2>{{city.name}}</h2>
-  <h4>{{city.country}}</h4>
-  <img src='../../../assets/images/city-images/{{city.id}}.jpeg'>
-</div>
-<div>
-  <h2>Posts</h2>
-  <input [(ngModel)]="searchInput" type="text" placeholder="Search for posts" (keyup)="pushSearch(searchInput)">
-  <ul *ngIf="filteredPosts.length===0 && searchInput.length!==0">
-    <li class="posts">no matches</li>
-  </ul>
-  <ul *ngIf="filteredPosts.length===0 && searchInput.length===0">
-    <li class="posts" *ngFor="let post of city.posts; index as i;">
-      <a class="post_title" routerLink="{{post.id}}">{{post.title}} - {{post.date}}</a>
-      <p>{{post.body}}</p>
-    </li>
-  </ul>
-  <ul *ngIf="filteredPosts.length>0">
-    <li class="posts" *ngFor="let post of filteredPosts; index as i;">
-      <a class="post_title" routerLink="{{post.id}}">{{post.title}} - {{post.date}}</a>
-      <p>{{post.body}}</p>
-    </li>
-  </ul>
+<div id="city_listing">
+  <div id="city_header">
+    <section id="city_header_text">
+      <h2>{{city.name}}</h2>
+      <h4>{{city.country}}</h4>
+    </section>
+    <img id="city_img" src='../../../assets/images/city-images/{{city.id}}.jpeg'>
+  </div>
+  <div>
+    <h2>Posts</h2>
+    <input [(ngModel)]="searchInput" type="text" placeholder="Search for posts" (keyup)="pushSearch(searchInput)">
+    <ul *ngIf="filteredPosts.length===0 && searchInput.length!==0">
+      <li class="posts">no matches</li>
+    </ul>
+    <ul *ngIf="filteredPosts.length===0 && searchInput.length===0">
+      <li class="posts" *ngFor="let post of city.posts; index as i;">
+        <a class="post_title" routerLink="{{post.id}}">{{post.title}} - {{post.date}}</a>
+        <p>{{post.body}}</p>
+      </li>
+    </ul>
+    <ul *ngIf="filteredPosts.length>0">
+      <li class="posts" *ngFor="let post of filteredPosts; index as i;">
+        <a class="post_title" routerLink="{{post.id}}">{{post.title}} - {{post.date}}</a>
+        <p>{{post.body}}</p>
+      </li>
+    </ul>
+  </div>
 </div>
