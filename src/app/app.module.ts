@@ -8,6 +8,8 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { TopicsComponent } from './homepage/topics/topics.component';
 import { CityListingComponent } from './cities/city-listing/city-listing.component';
 import { PostComponent } from './cities/post/post.component';
+import { SearchComponent } from './cities/search/search.component';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,11 +18,13 @@ import { PostComponent } from './cities/post/post.component';
     HomepageComponent,
     TopicsComponent,
     CityListingComponent,
-    PostComponent
+    PostComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

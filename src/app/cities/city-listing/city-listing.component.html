@@ -5,6 +5,7 @@
 </div>
 <div>
   <h2>Posts</h2>
+  <app-search></app-search>
   <ul>
     <li class="posts" *ngFor="let post of city.posts; index as i;">
       <a class="post_title" routerLink="{{post.id}}">{{post.title}} - {{post.date}}</a>
