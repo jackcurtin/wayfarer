@@ -7,6 +7,7 @@ import { CitiesComponent } from './cities/cities.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { TopicsComponent } from './homepage/topics/topics.component';
 import { CityListingComponent } from './cities/city-listing/city-listing.component';
+import { PostComponent } from './cities/post/post.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { CityListingComponent } from './cities/city-listing/city-listing.compone
     CitiesComponent,
     HomepageComponent,
     TopicsComponent,
-    CityListingComponent
+    CityListingComponent,
+    PostComponent
   ],
   imports: [
     BrowserModule,

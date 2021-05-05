@@ -3,6 +3,7 @@ import {CitiesComponent} from '../cities.component';
 import { ActivatedRoute} from '@angular/router';
 import {Subscription} from 'rxjs';
 import {CITIES} from '../cities';
+import {POSTS} from './posts';
 
 @Component({
   selector: 'app-city-listing',
@@ -21,7 +22,8 @@ export class CityListingComponent implements OnInit {
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
       this.city = CITIES.find(city => {
-        return city.id === parseInt(params.get('id'), 10);
+        console.log(city.posts);
+        return city.id === parseInt(params.get('cityId'), 10);
       });
     });
   }

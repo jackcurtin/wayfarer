@@ -1,0 +1,11 @@
+.posts{
+  background-color: lightgoldenrodyellow;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 25px;
+}
+
+.post_title{
+  text-transform: uppercase;
+  font-weight: bold;
+}

@@ -1,10 +1,14 @@
 <div id="city_header">
-  <h3>{{city.name}}</h3>
+  <h2>{{city.name}}</h2>
   <h4>{{city.country}}</h4>
   <img src='../../../assets/images/city-images/{{city.id}}.jpeg'>
 </div>
 <div>
-<!--  <ul>-->
-<!--    <li *ngFor="let post of posts">Post</li>-->
-<!--  </ul>-->
+  <h2>Posts</h2>
+  <ul>
+    <li class="posts" *ngFor="let post of city.posts; index as i;">
+      <a class="post_title">{{city.posts[i].title}} - {{city.posts[i].date}}</a>
+      <p class="post_body">{{city.posts[i].body}}</p>
+    </li>
+  </ul>
 </div>

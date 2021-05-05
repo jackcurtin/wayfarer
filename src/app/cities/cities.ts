@@ -1,12 +1,16 @@
+import {POSTS} from './city-listing/posts';
+
 export const CITIES = [
   {
     id: 1,
     name: 'San Francisco',
-    country: 'United States'
+    country: 'United States',
+    posts: [POSTS[0], POSTS[1]]
   },
   {
     id: 2,
     name: 'London',
-    country: 'United Kingdom'
+    country: 'United Kingdom',
+    posts: [POSTS[2]]
   }
 ];
