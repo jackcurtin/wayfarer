@@ -7,18 +7,19 @@ const routes: Routes = [
   {
     path: 'cities',
     component: CitiesComponent,
-    // children: [
+    children: [
+      {
+        path: ':id',
+        component: CityListingComponent
+      }
+    ]
   },
-  {
-    path: 'cities/:id',
-    component: CityListingComponent
-  },
-    // ]
   {
     path: '',
     component: HomepageComponent
   }
 ];
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
