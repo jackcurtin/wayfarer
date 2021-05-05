@@ -15,11 +15,5 @@ export class CitiesComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.route.paramMap.subscribe(params => {
-      this.city = CITIES.find(city => {
-        // tslint:disable-next-line:radix
-        return city.id === parseInt(params.get('id'));
-      });
-    });
   }
 }

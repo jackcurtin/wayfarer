@@ -12,10 +12,20 @@ import {CITIES} from '../cities';
 export class CityListingComponent implements OnInit {
   @Input() id: number;
   @Input() name: string;
+  allCities = CITIES;
+  city: any;
+
 
   constructor(private route: ActivatedRoute) {
   }
 
   ngOnInit(): void {
+    this.route.paramMap.subscribe(params => {
+      this.city = CITIES.find(city => {
+        console.log(city.id);
+        console.log(params);
+        return city.id === parseInt(params.get('id'), 10);
+      });
+    });
   }
 }

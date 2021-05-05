@@ -7,13 +7,13 @@ const routes: Routes = [
   {
     path: 'cities',
     component: CitiesComponent,
-    children: [
-      {
-        path: ':id',
-        component: CityListingComponent
-      }
-    ]
+    // children: [
   },
+  {
+    path: 'cities/:id',
+    component: CityListingComponent
+  },
+    // ]
   {
     path: '',
     component: HomepageComponent

@@ -3,5 +3,5 @@
     <li *ngFor="let city of allCities" routerLink="{{city.id}}">{{city.name}}</li>
   </ul>
 </section>
-<h2>City {{city}}</h2>
+<h2>City {{this.city}}</h2>
 <app-city-listing [id]="city"></app-city-listing>
