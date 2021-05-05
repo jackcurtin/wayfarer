@@ -29,7 +29,7 @@ export class CityListingComponent implements OnInit {
     });
     this.searchSubject.pipe(distinctUntilChanged()).subscribe(searchCriteria => {
       console.log(searchCriteria);
-      this.filteredPosts = this.searchService.findPosts(searchCriteria);
+      this.filteredPosts = this.searchService.findPosts(searchCriteria, this.city.id);
       console.log(this.filteredPosts);
     });
   }

@@ -18,7 +18,7 @@ export class SearchComponent implements OnInit {
   ngOnInit(): void {
     this.searchSubject.pipe(distinctUntilChanged()).subscribe(searchCriteria => {
       console.log(searchCriteria);
-      this.filteredPosts = this.searchService.findPosts(searchCriteria);
+      // this.filteredPosts = this.searchService.findPosts(searchCriteria);
       console.log(this.filteredPosts);
     });
   }

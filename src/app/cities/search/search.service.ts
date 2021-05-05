@@ -8,10 +8,12 @@ export class SearchService {
 
   constructor() { }
 
-  findPosts(searchCriteria): any{
+  findPosts(searchCriteria, cityId): any{
     let filteredPosts = [];
+    console.log(cityId);
     POSTS.forEach(post => {
-      if (post.title.toLowerCase().includes(searchCriteria.toLowerCase())){
+      if (post.title.toLowerCase().includes(searchCriteria.toLowerCase())
+      && cityId === post.cityId){
         filteredPosts.push(post);
       }
     });
