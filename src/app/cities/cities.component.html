@@ -1,10 +1,12 @@
-<section id="cities_list">
-  <ul>
-    <li *ngFor="let city of allCities">
-      <a routerLink="{{city.id}}">
-        {{city.name}}
-      </a>
-    </li>
-  </ul>
-</section>
-<router-outlet></router-outlet>
+<div id="cities_landing">
+  <section id="cities_list">
+      <ul>
+        <li class="city_links" *ngFor="let city of allCities">
+          <a routerLink="{{city.id}}">
+            {{city.name}}
+          </a>
+        </li>
+      </ul>
+    </section>
+  <router-outlet></router-outlet>
+</div>
