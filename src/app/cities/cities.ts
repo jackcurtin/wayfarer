@@ -14,7 +14,7 @@ export const CITIES = [
     posts: [POSTS[2]]
   },
   {
-    id:3,
+    id: 3,
     name: 'Gibraltar',
     country: 'United Kingdom',
     posts: [POSTS[3]]

@@ -27,6 +27,7 @@ export class CityListingComponent implements OnInit {
       this.city = CITIES.find(city => {
         return city.id === parseInt(params.get('cityId'), 10);
       });
+      this.citiesService.sortDate(this.city.posts);
     });
     this.searchSubject.pipe(distinctUntilChanged()).subscribe(searchCriteria => {
       this.filteredPosts = this.searchService.findPosts(searchCriteria, this.city.id);

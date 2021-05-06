@@ -14,6 +14,6 @@ export class CitiesService {
       console.log(da);
       return da - db;
     });
-    return sortedArr;
+    return sortedArr.reverse();
   }
 }

@@ -3,7 +3,7 @@ export const POSTS = [
     id: 1,
     title: 'Fun in San Francisco',
     body: 'I\'m having a ball in San Francisco.',
-    date: 'July 19, 2020',
+    date: 'July 19, 2017',
     cityId: 1,
     author: 'Michael Sanders'
   },
