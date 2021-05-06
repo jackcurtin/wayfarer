@@ -1,6 +1,3 @@
-import {POSTS} from './city-listing/posts';
-import { SearchService} from './search/search.service';
-
 export const CITIES = [
   {
     id: 1,
