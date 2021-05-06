@@ -11,6 +11,7 @@ import { PostComponent } from './cities/post/post.component';
 import { SearchComponent } from './cities/search/search.component';
 import {FormsModule} from '@angular/forms';
 import { PostFormComponent } from './cities/post-form/post-form.component';
+import { DatePipe} from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,7 @@ import { PostFormComponent } from './cities/post-form/post-form.component';
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

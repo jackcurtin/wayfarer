@@ -1,8 +1,9 @@
-<form>
+<form xmlns="http://www.w3.org/1999/html">
   <p>Full Name:</p>
-  <input [(ngModel)]="author" type="text">
+  <input [(ngModel)]="author" name="author" type="text">
   <p>Post Title:</p>
-  <input [(ngModel)]="title" type="text">
+  <input [(ngModel)]="title" name="title" type="text">
   <p>Tell us about your trip</p>
-  <input [(ngModel)]="body" type="text">
+  <input [(ngModel)]="body" name="body" type="text">
+  <input (click)="createPost(author)" type="submit" value="Submit">
 </form>
