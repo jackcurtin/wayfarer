@@ -7,6 +7,8 @@
 #about{
   display: flex;
   flex-direction: column;
+  background-color: lightgoldenrodyellow;
+  margin: 0 10%;
 }
 h3{
   text-align: center;
@@ -14,6 +16,13 @@ h3{
 ul{
   display: inline-flex;
   justify-content: space-evenly;
-
+}
+#cities_link{
+  display: block;
+  text-align: center;
+  margin: 3px;
+  background-color: lightslategray;
+  border-radius: 20px;
+  width: 10%;
 }
 

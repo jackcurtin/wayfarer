@@ -1,19 +1,20 @@
 header{
   display: flex;
-  background-color: dodgerblue;
+  background-color: lightslategray;
   color: white;
   height: 7vh;
   width: 100%;
   align-items: center;
+}
+#site_title:hover{
+  color: lightgoldenrodyellow;
 }
 h1{
   margin-left: 1vw;
 }
 #content{
   width: 100%;
-  height: 100%;
-  display: inline-flex;
-  justify-content: space-evenly;
+  height: auto;
 }
 #logo{
   height: 75%;

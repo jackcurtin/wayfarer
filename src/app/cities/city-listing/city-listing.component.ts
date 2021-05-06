@@ -4,6 +4,7 @@ import {CITIES} from '../cities';
 import {Subject} from 'rxjs';
 import {SearchService} from '../search/search.service';
 import {distinctUntilChanged} from 'rxjs/operators';
+import {CitiesService} from '../../services/cities/cities.service';
 
 
 @Component({
@@ -18,7 +19,7 @@ export class CityListingComponent implements OnInit {
   filteredPosts: any = [];
   searchSubject = new Subject();
 
-  constructor(private route: ActivatedRoute, private searchService: SearchService) {
+  constructor(private route: ActivatedRoute, private searchService: SearchService, private citiesService: CitiesService) {
   }
 
   ngOnInit(): void {
@@ -28,8 +29,8 @@ export class CityListingComponent implements OnInit {
       });
     });
     this.searchSubject.pipe(distinctUntilChanged()).subscribe(searchCriteria => {
-      console.log(searchCriteria);
       this.filteredPosts = this.searchService.findPosts(searchCriteria, this.city.id);
+      this.filteredPosts = this.citiesService.sortDate(this.filteredPosts);
       console.log(this.filteredPosts);
     });
   }
