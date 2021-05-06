@@ -12,16 +12,26 @@
 
 #city_header{
   display: inline-flex;
+  grid-column-start: 2;
+  grid-row-start: 1;
 }
 
 #city_img{
-  width: 650px;
-  text-align: right;
+  width: 50%;
 }
 
 #city_listing{
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  justify-items: center;
+  display: grid;
+  grid-template-rows: 50% 50%;
+  grid-template-columns: 25% 75%;
+  width: 80vw;
+}
+
+#post_outlet{
+  grid-column-start: 2;
+  grid-row-start: 2;
+}
+
+ul{
+  padding-left: 0px;
 }

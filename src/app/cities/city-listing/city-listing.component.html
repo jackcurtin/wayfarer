@@ -6,7 +6,7 @@
     </section>
     <img id="city_img" src='../../../assets/images/city-images/{{city.id}}.jpeg'>
   </div>
-  <div>
+  <div id="post_outlet">
     <h2>Posts</h2>
     <input [(ngModel)]="searchInput" type="text" placeholder="Search for posts" (keyup)="pushSearch(searchInput)">
     <ul *ngIf="filteredPosts.length===0 && searchInput.length!==0">

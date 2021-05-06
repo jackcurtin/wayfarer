@@ -1,24 +1,34 @@
 #cities_landing{
   display: inline-flex;
   justify-content: space-evenly;
-  margin: auto;
+  margin: 10px auto;
+  height: 100%;
+  width: 100vw;
 }
 #cities_list{
-  width: 25vw;
+  width: 20vw;
+  height: 100%;
   font-size: 30px;
-  border: black solid;
-  justify-content: center;
+  background-color: lightslategray;
+  opacity: 80%;
 }
 
 .city_links{
   text-align: center;
   background-color: lightgoldenrodyellow;
   border-radius: 15px;
-  margin-top: 20px;
+  margin: 20px auto;
   border: black solid 1px;
-  width: 60%;
+  width: 80%;
+  height: auto;
 }
 
 ul{
   padding-left: 0px;
+}
+
+#outlet{
+  width: 100%;
+  display: inline-flex;
+  justify-items: right;
 }
