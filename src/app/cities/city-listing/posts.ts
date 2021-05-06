@@ -54,5 +54,13 @@ export const POSTS = [
     date: 'November 29, 2020',
     cityId: 1,
     author: 'Catherine Michaels'
+  },
+  {
+    id: 8,
+    title: 'Not San Francisco',
+    body: 'Gibraltar is fine, but it\'s no San Francisco.',
+    date: 'March 7, 2021',
+    cityId: 3,
+    author: 'Michael Sanders'
   }
 ];

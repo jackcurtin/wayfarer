@@ -23,7 +23,7 @@
 
 #city_listing{
   display: grid;
-  grid-template-rows: 50% 50%;
+  grid-template-rows: auto auto;
   grid-template-columns: 10% 90%;
   width: 60vw;
 }

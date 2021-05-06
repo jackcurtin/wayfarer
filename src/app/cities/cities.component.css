@@ -11,6 +11,10 @@
   background-color: lightslategray;
   margin: 8px;
   border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-content: space-evenly;
+  justify-content: space-evenly;
 }
 
 .city_links{
@@ -20,7 +24,7 @@
   margin: 20px auto;
   border: black solid 1px;
   width: 80%;
-  height: auto;
+  padding: 5% 3%;
 }
 
 ul{

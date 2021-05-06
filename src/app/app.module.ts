@@ -10,6 +10,7 @@ import { CityListingComponent } from './cities/city-listing/city-listing.compone
 import { PostComponent } from './cities/post/post.component';
 import { SearchComponent } from './cities/search/search.component';
 import {FormsModule} from '@angular/forms';
+import { PostFormComponent } from './cities/post-form/post-form.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import {FormsModule} from '@angular/forms';
     TopicsComponent,
     CityListingComponent,
     PostComponent,
-    SearchComponent
+    SearchComponent,
+    PostFormComponent
   ],
   imports: [
     BrowserModule,
