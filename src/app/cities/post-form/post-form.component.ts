@@ -11,7 +11,7 @@ export class PostFormComponent implements OnInit {
   author: string;
   title: string;
   body: string;
-  id: number = POSTS.length;
+  id: number = POSTS.length + 1;
   @Input() cityId: number;
   date: string = this.datepipe.transform(Date.now()).toString();
 
@@ -20,16 +20,15 @@ export class PostFormComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  createPost(test): void{
-    console.log(this.date);
+  createPost(authorInput, titleInput, bodyInput): void{
     POSTS.push(
       {
         id: this.id,
-        title: test,
-        body: test,
+        title: titleInput,
+        body: bodyInput,
         date: this.date,
         cityId: this.cityId,
-        author: test,
+        author: authorInput,
       }
       );
     console.log(POSTS);

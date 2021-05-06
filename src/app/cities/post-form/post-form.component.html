@@ -5,5 +5,5 @@
   <input [(ngModel)]="title" name="title" type="text">
   <p>Tell us about your trip</p>
   <input [(ngModel)]="body" name="body" type="text">
-  <input (click)="createPost(author)" type="submit" value="Submit">
+  <input (click)="createPost(author, title, body)" type="submit" value="Submit">
 </form>
