@@ -1,0 +1,28 @@
+#post_form{
+  background-color: palevioletred;
+  padding: 5%;
+  border-radius: 20px;
+}
+#form_heading{
+  margin-top: 0px;
+}
+#form_forms{
+  display: grid;
+  grid-template-columns: 12% auto 12% auto;
+  grid-template-rows: 30% 70%;
+  grid-gap: 10%;
+}
+#body_tag{
+  grid-column-end: 2;
+}
+#body_form{
+  grid-column-start: 2;
+  grid-column-end: 5;
+}
+p{
+  font-size: 18px;
+  text-align: center;
+}
+#submit{
+  margin-top: 10px;
+}
