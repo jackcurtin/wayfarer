@@ -1,6 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 import {POSTS} from '../city-listing/posts';
 import {DatePipe} from '@angular/common';
+import {CITIES} from '../cities';
+import {element} from 'protractor';
 
 @Component({
   selector: 'app-post-form',
@@ -20,17 +22,22 @@ export class PostFormComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  createPost(authorInput, titleInput, bodyInput): void{
-    POSTS.push(
-      {
-        id: this.id,
-        title: titleInput,
-        body: bodyInput,
-        date: this.date,
-        cityId: this.cityId,
-        author: authorInput,
-      }
+  createPost(authorInput, titleInput, bodyInput): void {
+    if (!titleInput || titleInput.length > 200 ) {
+      console.log('invalid length');
+    } else if (!bodyInput){
+      console.log('must write something in body');
+    } else{
+      POSTS.push(
+        {
+          id: this.id,
+          title: titleInput,
+          body: bodyInput,
+          date: this.date,
+          cityId: this.cityId,
+          author: authorInput,
+        }
       );
-    console.log(POSTS);
+    }
   }
 }
