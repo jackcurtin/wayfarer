@@ -5,6 +5,7 @@ import {Subject} from 'rxjs';
 import {SearchService} from '../search/search.service';
 import {distinctUntilChanged} from 'rxjs/operators';
 import {CitiesService} from '../../services/cities/cities.service';
+import {POSTS} from './posts';
 
 
 @Component({
@@ -26,6 +27,14 @@ export class CityListingComponent implements OnInit {
     this.route.paramMap.subscribe(params => {
       this.city = CITIES.find(city => {
         return city.id === parseInt(params.get('cityId'), 10);
+      });
+      POSTS.forEach(post => {
+        if (this.city.posts.includes(post)){
+          console.log('post already included');
+        }
+        else if (post.cityId === this.city.id){
+          this.city.posts.push(post);
+        }
       });
       this.citiesService.sortDate(this.city.posts);
     });

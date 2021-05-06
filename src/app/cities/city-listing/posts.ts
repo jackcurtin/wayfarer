@@ -30,5 +30,29 @@ export const POSTS = [
     date: 'May 6, 2020',
     cityId: 3,
     author: 'Catherine Michaels'
+  },
+  {
+    id: 5,
+    title: 'London. Incredible',
+    body: 'I love London.',
+    date: 'January 15, 2021',
+    cityId: 2,
+    author: 'Catherine Michaels'
+  },
+  {
+    id: 6,
+    title: 'San Francisco, I cannot get enough.',
+    body: 'I am addicted to San Francisco and desperately need help.',
+    date: 'March 13, 2021',
+    cityId: 1,
+    author: 'Michael Sanders'
+  },
+  {
+    id: 7,
+    title: 'Golden Gate Experience',
+    body: 'This bridge is huge!',
+    date: 'November 29, 2020',
+    cityId: 1,
+    author: 'Catherine Michaels'
   }
 ];

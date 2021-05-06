@@ -1,22 +1,23 @@
 import {POSTS} from './city-listing/posts';
+import { SearchService} from './search/search.service';
 
 export const CITIES = [
   {
     id: 1,
     name: 'San Francisco',
     country: 'United States',
-    posts: [POSTS[0], POSTS[1]]
+    posts: []
   },
   {
     id: 2,
     name: 'London',
     country: 'United Kingdom',
-    posts: [POSTS[2]]
+    posts: []
   },
   {
     id: 3,
     name: 'Gibraltar',
     country: 'United Kingdom',
-    posts: [POSTS[3]]
+    posts: []
   }
 ];
