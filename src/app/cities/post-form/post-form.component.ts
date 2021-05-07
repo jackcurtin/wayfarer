@@ -1,8 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import {POSTS} from '../city-listing/posts';
 import {DatePipe} from '@angular/common';
-import {CITIES} from '../cities';
-import {element} from 'protractor';
 
 @Component({
   selector: 'app-post-form',
@@ -23,11 +21,9 @@ export class PostFormComponent implements OnInit {
   }
 
   createPost(authorInput, titleInput, bodyInput): void {
-    if (!titleInput || titleInput.length > 200 ) {
-      console.log('invalid length');
-    } else if (!bodyInput){
-      console.log('must write something in body');
-    } else{
+    if (!this.author || !this.title || !this.body){
+      console.log('Inputs empty - nothing sent.');
+    } else {
       POSTS.push(
         {
           id: this.id,
