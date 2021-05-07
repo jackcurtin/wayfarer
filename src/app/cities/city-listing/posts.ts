@@ -33,7 +33,7 @@ export const POSTS = [
   },
   {
     id: 5,
-    title: 'London. Incredible',
+    title: 'London... Incredible',
     body: 'I love London.',
     date: 'January 15, 2021',
     cityId: 2,
@@ -41,7 +41,7 @@ export const POSTS = [
   },
   {
     id: 6,
-    title: 'San Francisco, I cannot get enough.',
+    title: 'San Francisco, I cannot get enough',
     body: 'I am addicted to San Francisco and desperately need help.',
     date: 'March 13, 2021',
     cityId: 1,

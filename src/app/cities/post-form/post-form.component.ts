@@ -35,6 +35,7 @@ export class PostFormComponent implements OnInit {
           author: authorInput
         }
       );
+      this.citiesService.populateCityPosts(this.city);
       this.author = '';
       this.title = '';
       this.body = '';

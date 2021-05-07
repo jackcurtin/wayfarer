@@ -3,7 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import {CITIES} from '../cities';
 import {Subject} from 'rxjs';
 import {SearchService} from '../search/search.service';
-import {debounceTime, distinctUntilChanged} from 'rxjs/operators';
+import {distinctUntilChanged} from 'rxjs/operators';
 import {CitiesService} from '../cities.service';
 import {POSTS} from './posts';
 
@@ -21,8 +21,9 @@ export class CityListingComponent implements OnInit {
   searchSubject = new Subject();
   submitForm: any;
 
-  constructor(private route: ActivatedRoute, private searchService: SearchService, private citiesService: CitiesService) {
-  }
+  constructor(private route: ActivatedRoute,
+              private searchService: SearchService,
+              private citiesService: CitiesService) {}
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
