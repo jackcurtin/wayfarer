@@ -5,7 +5,7 @@ import {Subject} from 'rxjs';
 import {SearchService} from '../search/search.service';
 import {distinctUntilChanged} from 'rxjs/operators';
 import {CitiesService} from '../cities.service';
-import {POSTS} from './posts';
+import {POSTS} from '../post/posts';
 
 
 @Component({

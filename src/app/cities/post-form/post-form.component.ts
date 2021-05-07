@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import {POSTS} from '../city-listing/posts';
+import {POSTS} from '../post/posts';
 import {DatePipe} from '@angular/common';
 import {CitiesService} from '../cities.service';
 
