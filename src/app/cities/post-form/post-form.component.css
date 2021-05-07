@@ -10,13 +10,15 @@
 #form_forms{
   display: grid;
   grid-template-columns: 12% auto 12% auto;
-  grid-template-rows: 30% 70%;
+  grid-template-rows: 5% 25% 5% 65%;
   grid-gap: 10%;
 }
 #body_tag{
+  grid-row-start: 4;
   grid-column-end: 2;
 }
 #body_form{
+  grid-row-start: 4;
   grid-column-start: 2;
   grid-column-end: 5;
 }
@@ -25,5 +27,35 @@ p{
   text-align: center;
 }
 #submit{
-  margin-top: 10px;
+  margin-top: 20px;
+}
+#author_tag{
+  grid-row-start: 2;
+  grid-column-start: 1;
+}
+#title_tag{
+  grid-column-start: 3;
+  grid-row-start: 2;
+}
+#author_input{
+  grid-column-start: 2;
+  grid-row-start: 2;
+}
+#title_input{
+  grid-row-start: 2;
+  grid-column-start: 4;
+}
+#body_alert{
+  grid-row-start: 3;
+  grid-column-start: 2;
+  grid-column-end: 4;
+}
+
+#author_alert{
+  grid-row-start: 1;
+  grid-column-start: 2;
+}
+#title_alert{
+  grid-row-start: 1;
+  grid-column-start: 4;
 }

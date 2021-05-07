@@ -1,24 +1,30 @@
-<form id="post_form">
+<form id="post_form" ngNativeValidate>
   <h2 id="form_heading">Wanna share? Let us know your story below.</h2>
   <div id="form_forms">
-    <p>Full Name:</p>
+    <p id="author_tag" >Full Name:</p>
     <input [(ngModel)]="author" name="author" type="text"
-           required maxlength="30" #anAuthor="ngModel">
-    <div *ngIf="anAuthor.invalid && (anAuthor.touched)" class="alert">
+           required maxlength="30" #anAuthor="ngModel" id="author_input">
+    <div *ngIf="anAuthor.invalid && (anAuthor.touched)" id="author_alert">
       <div *ngIf="anAuthor.errors.required">
         Your name is required.
       </div>
     </div>
-    <p>Post Title:</p>
+    <p id="title_tag">Post Title:</p>
     <input [(ngModel)]="title" name="title" type="text"
-           required="" maxlength="200" #aTitle="ngModel">
-    <div *ngIf="aTitle.invalid && (aTitle.touched)" class="alert">
+           required="" maxlength="200" #aTitle="ngModel" id="title_input">
+    <div *ngIf="aTitle.invalid && (aTitle.touched)" id="title_alert">
       <div *ngIf="aTitle.errors.required">
         You must enter a title.
       </div>
     </div>
     <p id="body_tag">Tell us about your trip</p>
-    <input [(ngModel)]="body" name="body" type="text" id="body_form" required minlength="12">
+    <input [(ngModel)]="body" name="body" type="text" id="body_form"
+           required minlength="12" #aBody="ngModel">
+    <div *ngIf="aBody.invalid && (aBody.touched)" id="body_alert">
+      <div *ngIf="aBody.errors.required || aBody.errors.minLength">
+        Minimum 12 characters required
+      </div>
+    </div>
   </div>
   <input (click)="createPost(author, title, body)" type="submit" value="Submit" id="submit">
 </form>
