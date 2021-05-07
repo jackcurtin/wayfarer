@@ -35,7 +35,8 @@
 #post_outlet{
   border: solid 1px lightslategray;
   border-radius: 20px;
-  grid-column-start: 2;
+  grid-column-start: 1;
+  grid-column-end: 3;
   grid-row-start: 2;
   height: 300px;
   overflow-y: auto;
