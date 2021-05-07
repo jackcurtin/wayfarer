@@ -33,6 +33,7 @@ ul{
 
 #outlet{
   width: 100%;
+  height: 87vh;
   display: inline-flex;
   justify-items: right;
 }

@@ -15,6 +15,7 @@ export class PostFormComponent implements OnInit {
   id: number = POSTS.length + 1;
   @Input() city: any;
   date: string = this.datepipe.transform(Date.now()).toString();
+  form: any;
 
   constructor(private datepipe: DatePipe, private citiesService: CitiesService) { }
 
@@ -39,6 +40,7 @@ export class PostFormComponent implements OnInit {
       this.author = '';
       this.title = '';
       this.body = '';
+      this.form.markAsUntouched().reset();
     }
   }
 }

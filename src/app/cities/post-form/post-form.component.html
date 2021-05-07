@@ -1,4 +1,4 @@
-<form id="post_form" ngNativeValidate>
+<form id="post_form" ngNativeValidate [(ngModel)]="form">
   <h2 id="form_heading">Wanna share? Let us know your story below.</h2>
   <div id="form_forms">
     <p id="author_tag" >Full Name:</p>
@@ -22,10 +22,9 @@
            required minlength="12" #aBody="ngModel">
     <div *ngIf="aBody.invalid && (aBody.touched)" id="body_alert">
       <div *ngIf="aBody.errors.required || aBody.errors.minLength">
-        Minimum 12 characters required
+        Minimum 12 characters required.
       </div>
     </div>
   </div>
   <input (click)="createPost(author, title, body)" type="submit" value="Submit" id="submit">
-  }
 </form>
