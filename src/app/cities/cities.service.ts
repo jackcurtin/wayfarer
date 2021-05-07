@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import {POSTS} from './city-listing/posts';
 
 @Injectable({
   providedIn: 'root'
@@ -6,6 +7,18 @@ import { Injectable } from '@angular/core';
 export class CitiesService {
 
   constructor() { }
+
+  populateCityPosts(city): void{
+    POSTS.forEach(post => {
+      if (city.posts.includes(post)){
+        console.log('post already included');
+      }
+      else if (post.cityId === city.id){
+        city.posts.push(post);
+      }
+      this.sortDate(city.posts);
+    });
+  }
 
   sortDate(dateArr): any{
     let sortedArr = dateArr.sort((a, b) => {

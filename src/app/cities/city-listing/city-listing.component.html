@@ -19,11 +19,11 @@
       </li>
     </ul>
     <ul *ngIf="filteredPosts.length>0">
-      <li class="posts" *ngFor="let post of filteredPosts; index as i;">
+      <li class="posts" *ngFor="let post of filteredPosts;">
         <a class="post_title" routerLink="{{post.id}}">{{post.title}} - {{post.date}}</a>
         <p>{{post.body}}</p>
       </li>
     </ul>
   </div>
 </div>
-<app-post-form [cityId]="city.id"></app-post-form>
+<app-post-form [city]="city" [(ngModel)]="submitForm"></app-post-form>

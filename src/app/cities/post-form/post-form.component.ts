@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import {POSTS} from '../city-listing/posts';
 import {DatePipe} from '@angular/common';
+import {CitiesService} from '../cities.service';
 
 @Component({
   selector: 'app-post-form',
@@ -12,10 +13,10 @@ export class PostFormComponent implements OnInit {
   title: string;
   body: string;
   id: number = POSTS.length + 1;
-  @Input() cityId: number;
+  @Input() city: any;
   date: string = this.datepipe.transform(Date.now()).toString();
 
-  constructor(private datepipe: DatePipe) { }
+  constructor(private datepipe: DatePipe, private citiesService: CitiesService) { }
 
   ngOnInit(): void {
   }
@@ -30,7 +31,7 @@ export class PostFormComponent implements OnInit {
           title: titleInput,
           body: bodyInput,
           date: this.date,
-          cityId: this.cityId,
+          cityId: this.city.id,
           author: authorInput
         }
       );
