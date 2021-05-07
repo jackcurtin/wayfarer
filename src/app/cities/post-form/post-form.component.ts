@@ -35,9 +35,12 @@ export class PostFormComponent implements OnInit {
           body: bodyInput,
           date: this.date,
           cityId: this.cityId,
-          author: authorInput,
+          author: authorInput
         }
       );
+      this.author = '';
+      this.title = '';
+      this.body = '';
     }
   }
 }
